@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function RecipeReviewCard() {
+export default function RecipeReviewCard(props) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -63,17 +63,17 @@ export default function RecipeReviewCard() {
             <MoreVertIcon />
           </IconButton>
         }
-        title="MK5 Supra"
-        subheader="March/28/2021"
+        title={props.titleName}
+        subheader={props.date}
       />
       <CardMedia
         className={classes.media}
-        image={Supra}
+        image={props.image}
         title="Paella dish"
       />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-  It's a damn Toyota Supra! What else do you need?
+        {props.bodyText}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
