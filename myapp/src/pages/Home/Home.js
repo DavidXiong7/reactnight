@@ -7,30 +7,23 @@ import {Grid} from '@material-ui/core';
 import Accordion from '../../components/Accordion/Accordion';
 import Button from '../../components/Button'
 import Checkbox from '@material-ui/core/Checkbox'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import AboutYou from '../AboutYou/AboutYou'
+import Calendar from '../Calendar/Calendar'
 
 function Home(){
-    const [firstName, setFirstName] = React.useState('Henry')
+
+    const [firstNames, setFirstNames] = React.useState(['henry','jason','alexa','khalil']);
+    const [currentUser, setCurrentUser] = React.useState('Brandon')
 
     const changefirstName = ()=> {
-        setFirstName('Jason')
+        setCurrentUser('Jason')
     }
-
-    // function welcomeBox(props) {
-    //     const [checked, setChecked] = React.useState(true) 
-    //     return(
-    //         <FormControlLabel
-    //          control={<Checkbox
-    //           checked={checked}
-    //           onChange={{e}=setChecked(e.target.checked)}
-    //           inputProps={{'aria-label': 'secondary checkbox'
-    //         }}
-    //           />}
-    //         Label="Testing"
-    //         />
-    //     )
-    // }
-
-
 
 
     return(

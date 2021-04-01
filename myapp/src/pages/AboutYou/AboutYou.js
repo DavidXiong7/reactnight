@@ -1,22 +1,21 @@
-// import React from "react";
+import React from "react";
+import './AboutYou.css';
 
-// class AboutYou extends React.Component{
-//     constructor(){
-//         super();
-//         state = {
-//             name:'Harry Potter',
-//             dateOfBirth:'',
-//             currentDate:'2147',
-//         }
-//     }
+class AboutYou extends React.Component{
+    constructor(){
+        super();
+            this.state = {
+                firstName: '',
+            }
+    }
 
-//     render(){
-//         return(
-//             <div>
-//                 <h2>{this.state.name}</h2>
-//             </div>
-//     )
-//     }
-// }
+    render(){
+        return(
+            <div>
+                <h2 className="AboutYou">About you </h2>
+            </div>
+        )
+    }
+}
 
-//     export default AboutYou;
+export default AboutYou;
